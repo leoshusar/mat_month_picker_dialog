@@ -42,6 +42,7 @@ class _MonthPickerDialog extends StatefulWidget {
 }
 
 class _MonthPickerDialogState extends State<_MonthPickerDialog> {
+  final _pageViewKey = GlobalKey();
   late final PageController _pageController;
   late final DateTime _firstDate;
   late final DateTime _lastDate;
@@ -215,13 +216,11 @@ class _MonthPickerDialogState extends State<_MonthPickerDialog> {
   }
 
   Widget _buildPager(ColorScheme colorScheme, String locale) {
-    WidgetsBinding.instance!.addPostFrameCallback((_) =>
-      _pageController.jumpToPage(_displayedPage));
-
     return SizedBox(
       height: 220.0,
       width: 300.0,
       child: PageView.builder(
+        key: _pageViewKey,
         controller: _pageController,
         scrollDirection: Axis.vertical,
         onPageChanged: (index) {
