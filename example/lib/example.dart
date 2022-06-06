@@ -28,7 +28,7 @@ class _ExampleState extends State<Example> {
                   context: context,
                   initialDate: DateTime.now(),
                   firstDate: DateTime(1970),
-                  lastDate: DateTime(2050)
+                  lastDate: DateTime(2050),
                 );
                 setState(() => _selected = selected);
               },
