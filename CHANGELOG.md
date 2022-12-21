@@ -1,3 +1,7 @@
+## 1.1.1
+
+- fix: bumped intl version to allow 0.18.*
+
 ## 1.1.0
 
 - add: locale and builder to showMonthPicker function
