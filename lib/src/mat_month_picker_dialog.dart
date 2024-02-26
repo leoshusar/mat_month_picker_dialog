@@ -297,7 +297,7 @@ class _MonthPickerDialogState extends State<_MonthPickerDialog> {
       onPressed: callback,
       style: TextButton.styleFrom(
         backgroundColor: isSelected ? colorScheme.primary : null,
-        primary: isSelected
+        foregroundColor: isSelected
             ? colorScheme.onPrimary
             : date.month == DateTime.now().month &&
                     date.year == DateTime.now().year
@@ -329,7 +329,7 @@ class _MonthPickerDialogState extends State<_MonthPickerDialog> {
       onPressed: callback,
       style: TextButton.styleFrom(
         backgroundColor: isSelected ? colorScheme.primary : null,
-        primary: isSelected
+        foregroundColor: isSelected
             ? colorScheme.onPrimary
             : year == DateTime.now().year
                 ? colorScheme.primary
