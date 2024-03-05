@@ -178,10 +178,10 @@ class _MonthPickerDialogState extends State<_MonthPickerDialog> {
           children: <Widget>[
             Text(
               DateFormat.yMMM(locale).format(_selectedDate),
-              style: theme.primaryTextTheme.subtitle1,
+              style: theme.primaryTextTheme.titleMedium,
             ),
             DefaultTextStyle(
-              style: theme.primaryTextTheme.headline5!,
+              style: theme.primaryTextTheme.headlineSmall!,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
@@ -296,13 +296,13 @@ class _MonthPickerDialogState extends State<_MonthPickerDialog> {
     return TextButton(
       onPressed: callback,
       style: TextButton.styleFrom(
-        backgroundColor: isSelected ? colorScheme.primary : null,
         foregroundColor: isSelected
             ? colorScheme.onPrimary
             : date.month == DateTime.now().month &&
                     date.year == DateTime.now().year
                 ? colorScheme.primary
                 : colorScheme.onSurface.withOpacity(0.87),
+        backgroundColor: isSelected ? colorScheme.primary : null,
         shape: const StadiumBorder(),
       ),
       child: Text(DateFormat.MMM(locale).format(date)),
@@ -328,12 +328,12 @@ class _MonthPickerDialogState extends State<_MonthPickerDialog> {
     return TextButton(
       onPressed: callback,
       style: TextButton.styleFrom(
-        backgroundColor: isSelected ? colorScheme.primary : null,
         foregroundColor: isSelected
             ? colorScheme.onPrimary
             : year == DateTime.now().year
                 ? colorScheme.primary
                 : colorScheme.onSurface.withOpacity(0.87),
+        backgroundColor: isSelected ? colorScheme.primary : null,
         shape: const StadiumBorder(),
       ),
       child: Text(DateFormat.y(locale).format(DateTime(year))),
