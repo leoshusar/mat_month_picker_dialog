@@ -1,3 +1,8 @@
+## 1.1.2
+
+- fix: adjusted parameter accordingly to new Flutter version
+- fix: fixed flutter upgrade issues
+
 ## 1.1.1
 
 - fix: bumped intl version to allow 0.18.*
