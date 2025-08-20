@@ -1,3 +1,7 @@
+## 1.1.3
+
+- fix: update intl to 0.20.2
+
 ## 1.1.2
 
 - fix: adjusted parameter accordingly to new Flutter version
